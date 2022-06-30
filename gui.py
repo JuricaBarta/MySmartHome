@@ -3,6 +3,7 @@ from tkinter import ttk
 
 from lights.gui import  LightsModule
 from security.gui import SecurityModule
+from settings.gui import SettingsModule
 from temperature.gui import TemperatureModule
 from tv.gui import TVModule
 
@@ -60,6 +61,10 @@ class MySmartHome(tk.Tk):
         self.temperature_frame = TemperatureModule(self)
         self.temperature_frame.grid(row=0, column=1)
         self.notebook.add(self.temperature_frame, text="Temperature")
+
+        self.settings_frame = SettingsModule(self)
+        self.settings_frame.grid(row=0, column=1)
+        self.notebook.add(self.settings_frame, text="Settings")
 
 
 root = MySmartHome()
